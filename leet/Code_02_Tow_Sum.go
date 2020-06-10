@@ -42,7 +42,7 @@ func twoSum(nums []int, target int) [2]int {
 		indices = append(indices, i)
 	}
 
-	sort(nums, indices)
+	sort1(nums, indices)
 	left := 0;
 	right := len(nums)-1
 	sum := 0
@@ -61,7 +61,7 @@ func twoSum(nums []int, target int) [2]int {
 	return [2]int{}
 }
 
-func sort(nums, indices []int) {
+func sort1(nums, indices []int) {
 
 	//构建大顶堆
 	for i, _ := range nums {
