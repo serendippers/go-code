@@ -1,8 +1,5 @@
 package leet
 
-
-
-
 func lengthOfLIS(nums []int) int {
 	if len(nums) <= 1 {
 		return len(nums)
