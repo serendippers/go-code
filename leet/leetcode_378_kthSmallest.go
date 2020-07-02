@@ -21,29 +21,29 @@ func kthSmallest(matrix [][]int, k int) int {
 
 	var ltNum int
 	l := matrix[0][0]
-	r := matrix[len - 1][h - 1]
+	r := matrix[len-1][h-1]
 	result := -math.MaxInt32
 
-	for  r>=l {
+	for r >= l {
 		result = 0
 		ltNum = 0
-		middle := (l + r)/2
-		i,j:=h -1,0
-		for i>=0 && j<=len-1 {
-			if  middle >= matrix[i][j] {
+		middle := (l + r) / 2
+		i, j := h-1, 0
+		for i >= 0 && j <= len-1 {
+			if middle >= matrix[i][j] {
 				result = max(matrix[i][j], result)
-				if j<= len -1 {
-					ltNum ++
+				if j <= len-1 {
+					ltNum++
 				}
-				j ++
+				j++
 			} else {
-				if i >=0 {
+				if i >= 0 {
 					ltNum += j
 				}
-				i --
+				i--
 			}
 		}
-		if i>0 {
+		if i > 0 {
 			ltNum += i * len
 		}
 		if ltNum == k {
@@ -57,12 +57,11 @@ func kthSmallest(matrix [][]int, k int) int {
 		}
 	}
 
-
 	return result
 }
 
-func Test379()  {
-	matrix := [][]int{{1,5,9}, {10, 11, 13}, {12, 13, 15}}
+func Test379() {
+	matrix := [][]int{{1, 5, 9}, {10, 11, 13}, {12, 13, 15}}
 	result := kthSmallest(matrix, 8)
 	fmt.Println(result)
 }

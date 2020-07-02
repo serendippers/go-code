@@ -1,6 +1,6 @@
 package main
 
-import "go-code/leet"
+import "go-code/go_container"
 
 func main() {
 	//Mutex，
@@ -8,5 +8,5 @@ func main() {
 	//var sliceBase = go_base.SliceBase{}
 	//sliceBase.NewSlice()
 	//leet.TestKnapsack()
-	leet.Test379()
+	go_container.TestGoList()
 }
