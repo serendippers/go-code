@@ -6,7 +6,6 @@ import (
 )
 
 //378. 有序矩阵中第K小的元素
-//没想出来，看了官方题解，惭愧
 
 func kthSmallest(matrix [][]int, k int) int {
 
